@@ -26,6 +26,22 @@ public class LineFactoryDemo {
         Line line2 = factory.withRandomFillingAndRandomLength();
         line2.print();
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        Line[] createdLines = factory.createManyRandomLines(100);
+        for (Line createdLine : createdLines) {
+            createdLine.print();
+        }
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        factory.createLineWithGrowingLength().print();
+        factory.createLineWithGrowingLength().print();
+        factory.createLineWithGrowingLength().print();
 
     }
 
