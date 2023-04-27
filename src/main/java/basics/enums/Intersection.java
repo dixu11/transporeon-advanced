@@ -2,13 +2,13 @@ package basics.enums;
 
 public class Intersection {
 
-    private String correctDirection;
+    private Direction correctDirection;
 
-    public Intersection(String correctDirection) {
+    public Intersection(Direction correctDirection) {
         this.correctDirection = correctDirection;
     }
 
-    public String getCorrectDirection() {
+    public Direction getCorrectDirection() {
         return correctDirection;
     }
 }
