@@ -1,13 +1,12 @@
 package basics.inheritance;
 
-public class Animal {
+public abstract class Animal {
 
     public void eatSomething() {
         System.out.println("Animal is eating");
     }
 
-    public void makeSound() {
-
-    }
+    //in abstract classes we can make abstract methods
+    public abstract void makeSound();
 
 }

@@ -41,9 +41,17 @@ public class Demo {
         animal.makeSound();
         animal = new Cat();
         animal.makeSound();
+        //it is not possible to make object (instance) directly from abstract class
+        //and it is good because we don't want them in our code
+       // animal = new Animal();
+
         System.out.println("----------");
-        Animal[] animals = {dog, dog2, cat, cat2, animal};
-        animalKeeper.feed(animals);
-        animalKeeper.feed(dog,dog2,cat,cat2,animal);
+        Mouse mouse = new Mouse();
+        Animal[] animals = {dog, dog2, cat, cat2, animal,mouse};
+        //animalKeeper.feed(animals);
+        animalKeeper.feed(dog,dog2,cat,cat2,animal,mouse);
+        System.out.println(animals.length);
+
+
     }
 }
