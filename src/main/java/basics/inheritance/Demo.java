@@ -29,5 +29,10 @@ public class Demo {
 //        animalKeeper.feedCat(cat);
         animalKeeper.feed(cat);
         animalKeeper.feed(dog);
+
+        System.out.println("---------");
+        Animal animal = new Dog();
+        Cat cat1 = (Cat) animal;
+        cat1.meow();
     }
 }

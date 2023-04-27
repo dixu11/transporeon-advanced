@@ -15,8 +15,18 @@ public class AnimalKeeper {
     public void feed(Animal animal) {
         animal.eatSomething();
 //     how to make it make a sound?
-        animal.bark();
-        animal.meow();
+//        animal.getClass().equals(Dog.class)
+        if (animal instanceof Dog) {
+            Dog dog = (Dog) animal;
+            dog.bark();
+        }else if (animal instanceof Cat){
+            Cat cat = (Cat) animal;
+            cat.meow();
+        }
+
+        //it is imposible to call dog methods on type Animal
+//        animal.bark();
+//        animal.meow();
     }
 
 }
