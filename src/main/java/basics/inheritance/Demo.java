@@ -3,8 +3,12 @@ package basics.inheritance;
 public class Demo {
     public static void main(String[] args) {
         Dog dog = new Dog();
-        System.out.println(dog);
+        Dog dog2 = new Dog("Reksio", 10, 4);
+        Cat cat = new Cat("Łukasz", 3, "white");
+        Cat cat2 = new Cat();
 
+        System.out.println(dog);
+        dog.bark();
         dog.doTricks();
         dog.teachDogNewTrick("sit");
         dog.teachDogNewTrick("give hand");
@@ -13,5 +17,9 @@ public class Demo {
         dog.doTricks();
 
         System.out.println(dog);
+
+        System.out.println("---------");
+        cat.meow();
+        cat.distractTheOwner();
     }
 }
