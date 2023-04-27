@@ -41,7 +41,9 @@ public class Demo {
         animal.makeSound();
         animal = new Cat();
         animal.makeSound();
-
-
+        System.out.println("----------");
+        Animal[] animals = {dog, dog2, cat, cat2, animal};
+        animalKeeper.feed(animals);
+        animalKeeper.feed(dog,dog2,cat,cat2,animal);
     }
 }

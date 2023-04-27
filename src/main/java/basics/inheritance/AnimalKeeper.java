@@ -31,4 +31,11 @@ public class AnimalKeeper {
 //        animal.meow();
     }
 
+    public void feed(Animal... animals) {
+        for (Animal animal : animals) {
+            animal.eatSomething();
+            animal.makeSound();
+        }
+    }
+
 }

@@ -39,6 +39,4 @@ public class Cat extends Animal {
         super.eatSomething();
         System.out.println("this animal is cat and it's eating mice");
     }
-
-
 }
