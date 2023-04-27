@@ -1,5 +1,10 @@
 package basics.inheritance;
 
+import basics.inheritance.animals.Animal;
+import basics.inheritance.animals.Cat;
+import basics.inheritance.animals.Dog;
+import basics.inheritance.animals.Mouse;
+
 public class Demo {
     public static void main(String[] args) {
         Dog dog = new Dog();
@@ -46,7 +51,7 @@ public class Demo {
        // animal = new Animal();
 
         System.out.println("----------");
-        Mouse mouse = new Mouse();
+        Mouse mouse = new Mouse("Mickey",5);
         Animal[] animals = {dog, dog2, cat, cat2, animal,mouse};
         //animalKeeper.feed(animals);
         animalKeeper.feed(dog,dog2,cat,cat2,animal,mouse);

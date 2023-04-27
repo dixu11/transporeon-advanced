@@ -1,21 +1,18 @@
-package basics.inheritance;
+package basics.inheritance.animals;
 
 public class Cat extends Animal {
 
-    private String name;
-    private int age;
     private String color;
 
     public Cat(String name, int age, String color) {
-        this.name = name;
-        this.age = age;
+        super(name,age);
         this.color = color;
     }
 
     public Cat() {
-        name = "Luna";
-        age = 1;
+        super("Luna",1);
         color = "black";
+        eatSomething();
     }
 
 

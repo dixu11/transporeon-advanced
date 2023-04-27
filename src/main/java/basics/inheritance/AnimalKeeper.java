@@ -1,5 +1,9 @@
 package basics.inheritance;
 
+import basics.inheritance.animals.Animal;
+import basics.inheritance.animals.Cat;
+import basics.inheritance.animals.Dog;
+
 public class AnimalKeeper {
 
     public void feedDog(Dog dog) {

@@ -1,23 +1,19 @@
-package basics.inheritance;
+package basics.inheritance.animals;
 
 import java.util.Arrays;
 
 public class Dog extends Animal{
 
-    private String name;
-    private int age;
     private String[] tricks;
     private int lastTrickIndex = 0;
 
     public Dog(String name, int age, int maxTricks) {
-        this.name = name;
-        this.age = age;
+        super(name,age);
         this.tricks = new String[maxTricks];
     }
 
     public Dog() {
-        name = "Bruno";
-        age = 8;
+        super("Bruno",8);
         tricks = new String[3];
     }
 
