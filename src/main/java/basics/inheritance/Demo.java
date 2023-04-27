@@ -15,11 +15,19 @@ public class Demo {
         dog.teachDogNewTrick("play dead");
         dog.teachDogNewTrick("bark on command");
         dog.doTricks();
+        dog.eatSomething();
 
         System.out.println(dog);
 
         System.out.println("---------");
         cat.meow();
         cat.distractTheOwner();
+        cat.eatSomething();
+        System.out.println("---------");
+        AnimalKeeper animalKeeper = new AnimalKeeper();
+//        animalKeeper.feedDog(dog);
+//        animalKeeper.feedCat(cat);
+        animalKeeper.feed(cat);
+        animalKeeper.feed(dog);
     }
 }

@@ -1,6 +1,6 @@
 package basics.inheritance;
 
-public class Cat {
+public class Cat extends Animal {
 
     private String name;
     private int age;
@@ -30,4 +30,11 @@ public class Cat {
         meow();
         meow();
     }
+
+    public void eatSomething() {
+        super.eatSomething();
+        System.out.println("this animal is cat and it's eating mice");
+    }
+
+
 }
