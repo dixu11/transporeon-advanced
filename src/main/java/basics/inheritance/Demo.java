@@ -31,8 +31,17 @@ public class Demo {
         animalKeeper.feed(dog);
 
         System.out.println("---------");
+//        Animal animal = new Dog();
+//        Cat cat1 = (Cat) animal;
+//        cat1.meow();
+
+        System.out.println("----------");
+        //polymorphism example
         Animal animal = new Dog();
-        Cat cat1 = (Cat) animal;
-        cat1.meow();
+        animal.makeSound();
+        animal = new Cat();
+        animal.makeSound();
+
+
     }
 }

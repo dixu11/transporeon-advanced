@@ -6,4 +6,8 @@ public class Animal {
         System.out.println("Animal is eating");
     }
 
+    public void makeSound() {
+
+    }
+
 }

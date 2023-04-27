@@ -14,15 +14,17 @@ public class AnimalKeeper {
 
     public void feed(Animal animal) {
         animal.eatSomething();
+        animal.makeSound(); //polymorphism
 //     how to make it make a sound?
 //        animal.getClass().equals(Dog.class)
-        if (animal instanceof Dog) {
+        //no polymorphism approach (wrong)
+        /*if (animal instanceof Dog) {
             Dog dog = (Dog) animal;
             dog.bark();
         }else if (animal instanceof Cat){
             Cat cat = (Cat) animal;
             cat.meow();
-        }
+        }*/
 
         //it is imposible to call dog methods on type Animal
 //        animal.bark();

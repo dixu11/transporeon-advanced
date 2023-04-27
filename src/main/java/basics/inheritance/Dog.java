@@ -21,6 +21,11 @@ public class Dog extends Animal{
         tricks = new String[3];
     }
 
+    public void makeSound() {
+        bark();
+    }
+
+
     public void bark() {
         System.out.println("woof, woof");
     }
@@ -58,6 +63,7 @@ public class Dog extends Animal{
     public void eatSomething() {
         System.out.println("Dog is eating doggie stuff");
     }
+
 
 
 }

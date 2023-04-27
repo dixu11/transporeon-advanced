@@ -18,6 +18,10 @@ public class Cat extends Animal {
         color = "black";
     }
 
+
+    public void makeSound() {
+        meow();
+    }
     public void meow() {
         System.out.println("meow! meow...");
     }
