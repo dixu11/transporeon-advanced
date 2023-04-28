@@ -15,11 +15,12 @@ public class Main2 {
         int result = 0;
         try {
             System.out.println("Give me number");
-            result = scanner.nextInt();
+           return scanner.nextInt();
         } catch (InputMismatchException e) {
-            result = readNumber();
+           return readNumber();
+        }finally {
+            System.out.println("there was a try to type a number");
         }
-        return result;
     }
 
 }
