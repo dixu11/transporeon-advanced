@@ -2,7 +2,7 @@ package basics.inheritance.animals;
 
 import java.util.Arrays;
 
-public class Dog extends Animal{
+public class Dog extends Animal implements Pet{
 
     private String[] tricks;
     private int lastTrickIndex = 0;
@@ -60,6 +60,10 @@ public class Dog extends Animal{
         System.out.println("Dog is eating doggie stuff");
     }
 
+    @Override
+    public void pet() {
+        System.out.println("dog is very happy!");
+    }
 
 
 }

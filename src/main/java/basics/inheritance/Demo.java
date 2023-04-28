@@ -5,6 +5,8 @@ import basics.inheritance.animals.Cat;
 import basics.inheritance.animals.Dog;
 import basics.inheritance.animals.Mouse;
 
+import java.util.ArrayList;
+
 public class Demo {
     public static void main(String[] args) {
         Dog dog = new Dog();
@@ -56,7 +58,8 @@ public class Demo {
         //animalKeeper.feed(animals);
         animalKeeper.feed(dog,dog2,cat,cat2,animal,mouse);
         System.out.println(animals.length);
-
-
     }
+
+    // concrete                                          abstract
+    //class                  abstract class             interface
 }
