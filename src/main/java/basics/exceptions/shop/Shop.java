@@ -11,7 +11,7 @@ public class Shop {
     private static final String FILE_PATH = "products.csv";
     private List<Product> products = new ArrayList<>();
 
-    public void loadProducts() throws FileNotFoundException {
+    public void loadProducts() throws FileNotFoundException,ProductCreationException {
         File file = new File(FILE_PATH);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()){
@@ -21,12 +21,19 @@ public class Shop {
         }
     }
 
-    private Product parseLineAndCreateProduct(String line) {
+    private Product parseLineAndCreateProduct(String line) throws ProductCreationException {
         String[] elements = line.split(";");
         String name = elements[0];
-        double price = Double.parseDouble(elements[1]);
-        int quantity = Integer.parseInt(elements[2]);
-        return new Product(name, quantity, price);
+        try {
+            double price = Double.parseDouble(elements[1]);
+            int quantity = Integer.parseInt(elements[2]);
+            if (price < 0 || quantity < 0) {
+                throw new ProductCreationException("negative value", line);
+            }
+            return new Product(name, quantity, price);
+        }catch (NumberFormatException e){
+            throw new ProductCreationException("please change text to number", line);
+        }
     }
 
     public List<Product> getProducts() {
