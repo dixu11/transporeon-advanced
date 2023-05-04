@@ -2,6 +2,7 @@ package oop.inheritance.animals;
 
 
 
+
 public class Mouse extends Animal implements Pet, Wild{
 
     public Mouse(String name, int age){
