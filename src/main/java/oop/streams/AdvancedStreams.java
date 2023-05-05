@@ -3,6 +3,7 @@ package oop.streams;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class AdvancedStreams {
 
@@ -20,6 +21,29 @@ public class AdvancedStreams {
                .toList();
 
         System.out.println(petNames);
+
+
+      List<String> everyPetNames =  owners.stream()
+                .flatMap(owner -> owner.getPets().stream())
+                .map(pet ->  pet.getName().toUpperCase())
+                .toList();
+        System.out.println(everyPetNames);
+
+        double average = owners.stream()
+                .flatMap(owner -> owner.getPets().stream())
+                .mapToInt(pet -> pet.getAge())
+                .average()
+                .orElse(0);
+
+
+        System.out.println(average);
+
+      List<Integer> numbers =  owners.stream()
+                .flatMap(owner -> owner.getPets().stream())
+                .mapToInt(pet -> pet.getAge())
+                .boxed() // moves you from IntStream (that has different methods) to normal Stream
+                .toList();
+        System.out.println(numbers);
 
     }
 }
