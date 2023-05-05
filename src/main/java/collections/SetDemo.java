@@ -1,5 +1,7 @@
 package collections;
 
+import oop.streamChallange.Person;
+
 import java.util.*;
 
 public class SetDemo {
@@ -22,7 +24,8 @@ public class SetDemo {
         }
         Product bread = new Product("Bread");
 
-        Set<Product> products = new HashSet<>();
+        Set<Product> products = new HashSet<>(); // tree set sort elements automatically using method from Comparable interface
+//        Set<Product> products = new TreeSet<>(); // tree set sort elements automatically using method from Comparable interface
         products.add(new Product("Milk"));
         products.add(new Product("Soda"));
         products.add(bread);
@@ -34,10 +37,12 @@ public class SetDemo {
         // equals ==
         System.out.println(products);
 
+
+
     }
 }
 
-class Product{
+class Product implements Comparable<Product>{
     private String name;
 
     public Product(String name) {
@@ -64,5 +69,10 @@ class Product{
     public int hashCode() {
         System.out.println("hash");
         return Objects.hash(name);
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return name.compareTo(o.name);
     }
 }
