@@ -22,6 +22,8 @@ public class PersonDemo {
         //List<Person> people = streamService.buildPeopleWithNames(names);
         //od tego momentu wykorzystuj również zbiór people do testu metod wykorzystujących argument List<Person>
 
+        Person person = new MyPerson("Ada");
+        System.out.println(person.getCash());
     }
 
 }
